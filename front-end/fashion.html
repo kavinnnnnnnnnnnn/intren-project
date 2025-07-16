@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fashion - MyStore</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background: url('/Users/sriramponraj/Downloads/fashion999999.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      background-image: none;
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+    }
+    .card img {
+      height: 250px;
+      background-image: none;
+      object-fit: cover;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+    }
+    footer a {
+      color: white;
+    }
+    footer a:hover {
+      color: orange;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">MyStore</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="electronics.html">Electronics</a></li>
+        <li class="nav-item"><a class="nav-link active" href="fashion.html">Fashion</a></li>
+        <li class="nav-item"><a class="nav-link" href="skincare.html">Skincare</a></li>
+        <li class="nav-item"><a class="nav-link" href="bikecar.html">Car & Bike Accessories</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Products -->
+<div class="container my-5">
+  <h1 class="mb-4">Men's Fashion</h1>
+  <div class="row g-4">
+    
+    <!-- Product 1 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/jack trans.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Men's Jacket</h5>
+          <p class="card-text">Stylish leather jacket for men.</p>
+          <p class="card-text">₹2,500</p>
+          <button class="btn btn-light" onclick="addToCart('Men\'s Jacket', '/Users/sriramponraj/Downloads/jack trans.jpeg', 'Stylish leather jacket for men.', '₹2500')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/premimum  trans.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Men's shirt</h5>
+          <p class="card-text">Premimum  Men Shirt </p>
+          <p class="card-text">₹3,200</p>
+          <button class="btn btn-light" onclick="addToCart('Men shirt', '/Users/sriramponraj/Downloads/premimum  trans.jpeg', 'Premimum Men Shirt', '₹3200')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/checked shirt.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Casual Shirt</h5>
+          <p class="card-text">Casual shirt </p>
+          <p class="card-text">₹1,800</p>
+          <button class="btn btn-light" onclick="addToCart('Casual shirts', '/Users/sriramponraj/Downloads/checked shirt.webp', 'casual shirt', '₹1800')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/stripe trans.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Stripe Shirt</h5>
+          <p class="card-text">Stripe Shirt</p>
+          <p class="card-text">₹2,100</p>
+          <button class="btn btn-light" onclick="addToCart('Stripe Shirt', '/Users/sriramponraj/Downloads/stripe trans.jpeg', 'Stripr Shirt', '₹2100')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+   
+    
+    <!-- Product 1 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/frml trs.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Fromal Trouser</h5>
+          <p class="card-text">Fromal office wear Trouser</p>
+          <p class="card-text">₹2,500</p>
+          <button class="btn btn-light" onclick="addToCart('formal Men Trouser', '/Users/sriramponraj/Downloads/frml trs.jpeg', 'Fromal men Trouser', '₹2500')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/gurkha phant.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Italin Gurkha Phant</h5>
+          <p class="card-text">Italin Gurkha Phant</p>
+          <p class="card-text">₹3,200</p>
+          <button class="btn btn-light" onclick="addToCart('Gurkha Phant', '/Users/sriramponraj/Downloads/gurkha phant.jpeg', 'Gurkha Phant', '₹3200')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/jeannnnnnn.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Dior Jeans</h5>
+          <p class="card-text">Men's Jeans</p>
+          <p class="card-text">₹1,800</p>
+          <button class="btn btn-light" onclick="addToCart('Jeans', '/Users/sriramponraj/Downloads/jeannnnnnn.jpeg', 'Mens Jeans', '₹1800')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/baggy jeann.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Baggy Fit</h5>
+          <p class="card-text">Funcky Baggy Jeans</p>
+          <p class="card-text">₹2,100</p>
+          <button class="btn btn-light" onclick="addToCart('Baggy', '/Users/sriramponraj/Downloads/baggy jeann.webp', 'Baggy Jeans', '₹2100')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Product 1 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/download.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Fromal Shoe</h5>
+          <p class="card-text">classic Formal Shoe</p>
+          <p class="card-text">₹2,500</p>
+          <button class="btn btn-light" onclick="addToCart('Shoe', '/Users/sriramponraj/Downloads/download.jpeg', 'Classy fromal Shoe', '₹2500')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/louis-vuitton-trainer-sneakers-500x500.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Snekers</h5>
+          <p class="card-text">stylish men's Snekers</p>
+          <p class="card-text">₹3,200</p>
+          <button class="btn btn-light" onclick="addToCart('Snekers', '/Users/sriramponraj/Downloads/louis-vuitton-trainer-sneakers-500x500.webp', 'Stylis Mens Snekers', '₹3200')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/natullus1.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Patek Phillipe</h5>
+          <p class="card-text">Classic Steel Watches</p>
+          <p class="card-text">₹1,800</p>
+          <button class="btn btn-light" onclick="addToCart('Watches', '/Users/sriramponraj/Downloads/natullus1.jpeg', 'Wearing legacy', '₹1800')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/Users/sriramponraj/Downloads/lv perfume.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Dior Perfumes</h5>
+          <p class="card-text">Elegent fragrance</p>
+          <p class="card-text">₹2,100</p>
+          <button class="btn btn-light" onclick="addToCart('Perfumes', '/Users/sriramponraj/Downloads/lv perfume.webp', 'Eligant fragrance', '₹2100')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <p>&copy; 2025 MyStore. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+function addToCart(name, img, desc, price) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ name, img, desc, price, qty: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${name} added to cart!`);
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
